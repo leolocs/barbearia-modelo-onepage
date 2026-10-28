@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cortes, barba e atenção aos detalhes em um espaço pensado para você.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0f0f0f">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sua Barbearia | Cabelo, barba e estilo">
+    <meta property="og:description" content="Cortes, barba e atenção aos detalhes em um espaço pensado para você.">
+    <meta property="og:image" content="assets/images/barbearia.webp">
+    <title>Sua Barbearia | Cabelo, barba e estilo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+      <div class="header-inner container">
+        <a class="brand" href="#inicio" aria-label="Sua Barbearia, início" data-brand>SUA BARBEARIA</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="menu-toggle-label">Menu</span>
+          <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#cortes">Cortes</a>
+          <a href="#barbearia">A barbearia</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <button class="button button-small header-booking" type="button" data-booking>Agendar meu horário</button>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <picture class="hero-media">
+          <source
+            type="image/webp"
+            srcset="assets/images/barbeiro-em-acao-800.webp 800w, assets/images/barbeiro-em-acao-1600.webp 1600w"
+            sizes="100vw">
+          <img
+            src="assets/images/barbeiro-em-acao-1600.webp"
+            width="1600"
+            height="900"
+            alt="Barbeiro trabalhando no corte de um cliente"
+            fetchpriority="high"
+            decoding="async">
+        </picture>
+        <div class="hero-shade"></div>
+        <div class="hero-content container">
+          <h1 id="hero-title">Seu estilo começa com um bom corte.</h1>
+          <p class="hero-copy">Cortes, barba e atenção aos detalhes em um espaço pensado para você.</p>
+          <p class="hero-location" data-location-short>[Bairro] · [Cidade/UF]</p>
+          <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+        </div>
+      </section>
+
+      <section class="section services-section" id="servicos" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-heading section-heading-split">
+            <div>
+              <h2 id="services-title">Cuidado em cada detalhe.</h2>
+            </div>
+            <p class="section-intro">Um bom resultado começa entendendo o que combina com você. Escolha seu próximo cuidado.</p>
+          </div>
+          <p class="demo-note demo-note-dark">Valores ilustrativos para este modelo.</p>
+          <div class="services-list" id="services-list"></div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" id="cortes" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-heading section-heading-split gallery-heading">
+            <div>
+              <h2 id="gallery-title">Encontre seu próximo estilo.</h2>
+            </div>
+            <p class="section-intro">Referências para a sua próxima visita. O corte certo é aquele que combina com você.</p>
+          </div>
+          <p class="demo-note">Imagens ilustrativas de referência.</p>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="barbearia" aria-labelledby="about-title">
+        <div class="container about-layout">
+          <div class="about-photo-wrap">
+            <picture>
+              <source type="image/webp" srcset="assets/images/interior-barbearia-600.webp 600w, assets/images/interior-barbearia-1000.webp 1000w" sizes="(max-width: 760px) calc(100vw - 40px), 48vw">
+              <img src="assets/images/interior-barbearia-1000.webp" width="1000" height="760" alt="Interior acolhedor de uma barbearia com cadeiras de barbeiro" loading="lazy" decoding="async">
+            </picture>
+            <span class="photo-caption">UM ESPAÇO PARA VOCÊ</span>
+          </div>
+          <div class="about-copy">
+            <h2 id="about-title">Seu momento.<br>Seu estilo.</h2>
+            <p class="about-lead">Mais do que um corte, um tempo reservado para você.</p>
+            <p class="body-copy">Acreditamos que um bom atendimento começa com uma conversa. Cada detalhe importa: entender seu estilo, cuidar do acabamento e fazer você se sentir à vontade do início ao fim.</p>
+            <ul class="feature-list" id="feature-list"></ul>
+            <p class="demo-note demo-note-dark">Informações demonstrativas — personalize para a barbearia.</p>
+            <a class="text-link" href="#profissional">Conheça quem vai lhe atender <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section barber-section" id="profissional" aria-labelledby="barber-title">
+        <div class="container barber-layout">
+          <div class="barber-image">
+            <img src="assets/images/natan.jpg" width="150" height="150" alt="Retrato do profissional da barbearia" loading="lazy" decoding="async">
+            <span class="image-number" aria-hidden="true">01</span>
+          </div>
+          <div class="barber-copy">
+            <h2 id="barber-title">Quem vai<br>lhe atender</h2>
+            <p class="barber-name" id="barber-name"></p>
+            <p class="barber-role" id="barber-role"></p>
+            <p class="body-copy" id="barber-description"></p>
+            <p class="demo-note">Perfil demonstrativo — atualize com os dados reais.</p>
+            <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section reviews-section" aria-labelledby="reviews-title">
+        <div class="container">
+          <div class="section-heading section-heading-centered">
+            <h2 id="reviews-title">Uma experiência que dá vontade de repetir.</h2>
+          </div>
+          <p class="demo-note demo-note-dark centered-note">Depoimentos ilustrativos.</p>
+          <div class="reviews-grid" id="reviews-grid"></div>
+        </div>
+      </section>
+
+      <section class="section location-section" id="contato" aria-labelledby="location-title">
+        <div class="container">
+          <div class="section-heading section-heading-split">
+            <div>
+              <h2 id="location-title">Seu próximo corte tem endereço.</h2>
+            </div>
+            <p class="section-intro">Confira o endereço e os horários para planejar sua visita.</p>
+          </div>
+          <div class="location-layout">
+            <iframe
+              class="map-embed"
+              id="map-embed"
+              title="Mapa da barbearia em Guaraciaba do Norte - CE"
+              width="600"
+              height="450"
+              allowfullscreen
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="location-details">
+              <div class="location-block">
+                <h3>Onde estamos</h3>
+                <p class="location-address" id="location-address">R. Monsenhor Furtado, Guaraciaba do Norte - CE, 62380-000</p>
+                <p class="location-reference" id="location-reference"></p>
+                <a class="text-link text-link-light" id="directions-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Como chegar <span aria-hidden="true">↗</span></a>
+              </div>
+              <div class="location-block">
+                <h3>Horários</h3>
+                <p class="demo-note">Horários ilustrativos.</p>
+                <dl class="hours-list" id="hours-list"></dl>
+              </div>
+              <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq-section" aria-labelledby="faq-title">
+        <div class="container faq-layout">
+          <div class="faq-intro">
+            <h2 id="faq-title">Antes de marcar seu horário.</h2>
+            <p class="body-copy">Ficou com alguma dúvida? Aqui vão algumas respostas para ajudar.</p>
+          </div>
+          <div class="faq-list" id="faq-list"></div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="final-title">
+        <div class="container final-cta-inner">
+          <h2 id="final-title">Pronto para renovar o visual?</h2>
+          <p>Escolha seu próximo cuidado e agende seu atendimento.</p>
+          <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+        </div>
+        <span class="final-decoration" aria-hidden="true">S</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand-block">
+          <a class="brand" href="#inicio" data-brand>SUA BARBEARIA</a>
+          <p>Seu estilo, com atenção em cada detalhe.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <a href="#servicos">Serviços</a>
+          <a href="#cortes">Cortes</a>
+          <a href="#barbearia">A barbearia</a>
+          <a href="#contato">Contato</a>
+        </div>
+        <div class="footer-column footer-location">
+          <h2>Visite</h2>
+          <p id="footer-address">R. Monsenhor Furtado, Guaraciaba do Norte - CE, 62380-000</p>
+          <p>Horários demonstrativos — consulte a configuração antes de publicar.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Continue por aqui</h2>
+          <a class="instagram-link" id="instagram-link" href="#" target="_blank" rel="noopener noreferrer" hidden>Instagram <span aria-hidden="true">↗</span></a>
+          <p class="social-placeholder" id="social-placeholder">Instagram em breve.</p>
+          <button class="footer-booking" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="current-year"></span> <span data-brand>SUA BARBEARIA</span>. Todos os direitos reservados.</p>
+        <p class="site-disclaimer">Site demonstrativo. Imagens e informações ilustrativas.</p>
+        <p>Desenvolvido por <a href="https://leolocs.com.br/" target="_blank" rel="noopener noreferrer">Leolocs</a></p>
+      </div>
+    </footer>
+
+    <dialog class="notice-dialog" id="booking-dialog" aria-labelledby="booking-dialog-title">
+      <button class="dialog-close" type="button" aria-label="Fechar aviso">×</button>
+      <span class="dialog-mark" aria-hidden="true">✳</span>
+      <h2 id="booking-dialog-title">Em breve você poderá agendar seu horário por aqui.</h2>
+      <p>O link para a plataforma de agendamento será adicionado em breve.</p>
+      <button class="button dialog-ok" type="button">Entendi</button>
+    </dialog>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada da galeria">
+      <button class="lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>
+      <img class="lightbox-image" id="lightbox-image" src="assets/images/degrade-detalhe-960.webp" width="960" height="680" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </dialog>
+  </body>
+</html>
