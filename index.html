@@ -39,26 +39,66 @@
     </header>
 
     <main id="conteudo">
-      <section class="hero" id="inicio" aria-labelledby="hero-title">
-        <picture class="hero-media">
-          <source
-            type="image/webp"
-            srcset="assets/images/barbeiro-em-acao-800.webp 800w, assets/images/barbeiro-em-acao-1600.webp 1600w"
-            sizes="100vw">
-          <img
-            src="assets/images/barbeiro-em-acao-1600.webp"
-            width="1600"
-            height="900"
-            alt="Barbeiro trabalhando no corte de um cliente"
-            fetchpriority="high"
-            decoding="async">
-        </picture>
-        <div class="hero-shade"></div>
-        <div class="hero-content container">
-          <h1 id="hero-title">Seu estilo começa com um bom corte.</h1>
-          <p class="hero-copy">Cortes, barba e atenção aos detalhes em um espaço pensado para você.</p>
-          <p class="hero-location" data-location-short>[Bairro] · [Cidade/UF]</p>
-          <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+      <section class="hero" id="inicio" aria-label="Apresentação da barbearia">
+        <div class="hero-slides" aria-live="polite">
+          <article class="hero-slide is-active" aria-hidden="false">
+            <picture class="hero-media" aria-hidden="true">
+              <source type="image/webp" srcset="assets/images/barbeiro-em-acao-800.webp 800w, assets/images/barbeiro-em-acao-1600.webp 1600w" sizes="100vw">
+              <img src="assets/images/barbeiro-em-acao-1600.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async">
+            </picture>
+            <div class="hero-slide-shade" aria-hidden="true"></div>
+            <div class="hero-content container">
+              <h1 id="hero-title">Seu estilo começa<br><em>com um bom corte.</em></h1>
+              <p class="hero-description">Cortes, barba e atenção aos detalhes em um espaço pensado para você.</p>
+              <p class="hero-location" data-location-short>Guaraciaba do Norte · CE</p>
+              <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="hero-slide" aria-hidden="true" inert>
+            <picture class="hero-media" aria-hidden="true">
+              <source type="image/webp" srcset="assets/images/corte-tradicional-600.webp 600w, assets/images/corte-tradicional-960.webp 960w" sizes="100vw">
+              <img src="assets/images/corte-tradicional-960.webp" width="960" height="680" alt="" loading="eager" decoding="async">
+            </picture>
+            <div class="hero-slide-shade" aria-hidden="true"></div>
+            <div class="hero-content container">
+              <h2>Seu visual<br><em>do seu jeito.</em></h2>
+              <p class="hero-description">Um atendimento atento ao estilo que combina com você.</p>
+              <p class="hero-location" data-location-short>Guaraciaba do Norte · CE</p>
+              <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="hero-slide" aria-hidden="true" inert>
+            <picture class="hero-media" aria-hidden="true">
+              <source type="image/webp" srcset="assets/images/corte-em-execucao-600.webp 600w, assets/images/corte-em-execucao-960.webp 960w" sizes="100vw">
+              <img src="assets/images/corte-em-execucao-960.webp" width="960" height="680" alt="" loading="eager" decoding="async">
+            </picture>
+            <div class="hero-slide-shade" aria-hidden="true"></div>
+            <div class="hero-content container">
+              <h2>Cuidado em cada<br><em>detalhe.</em></h2>
+              <p class="hero-description">Do primeiro papo ao acabamento, cada escolha respeita seu estilo.</p>
+              <p class="hero-location" data-location-short>Guaraciaba do Norte · CE</p>
+              <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+          <article class="hero-slide" aria-hidden="true" inert>
+            <picture class="hero-media" aria-hidden="true">
+              <source type="image/webp" srcset="assets/images/barba-detalhe-600.webp 600w, assets/images/barba-detalhe-960.webp 960w" sizes="100vw">
+              <img src="assets/images/barba-detalhe-960.webp" width="960" height="680" alt="" loading="eager" decoding="async">
+            </picture>
+            <div class="hero-slide-shade" aria-hidden="true"></div>
+            <div class="hero-content container">
+              <h2>Um bom corte<br><em>começa na conversa.</em></h2>
+              <p class="hero-description">Encontre seu próximo visual com um atendimento feito para você.</p>
+              <p class="hero-location" data-location-short>Guaraciaba do Norte · CE</p>
+              <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+            </div>
+          </article>
+        </div>
+        <div class="hero-controls" role="group" aria-label="Slides da apresentação">
+          <button class="hero-dot is-active" type="button" aria-label="Mostrar slide 1" aria-pressed="true"></button>
+          <button class="hero-dot" type="button" aria-label="Mostrar slide 2" aria-pressed="false"></button>
+          <button class="hero-dot" type="button" aria-label="Mostrar slide 3" aria-pressed="false"></button>
+          <button class="hero-dot" type="button" aria-label="Mostrar slide 4" aria-pressed="false"></button>
         </div>
       </section>
 
@@ -66,12 +106,14 @@
         <div class="container">
           <div class="section-heading section-heading-split">
             <div>
-              <h2 id="services-title">Cuidado em cada detalhe.</h2>
+              <h2 id="services-title">Nossos cortes e serviços</h2>
             </div>
-            <p class="section-intro">Um bom resultado começa entendendo o que combina com você. Escolha seu próximo cuidado.</p>
+            <p class="section-intro">Escolha o estilo que mais combina com você</p>
           </div>
-          <p class="demo-note demo-note-dark">Valores ilustrativos para este modelo.</p>
           <div class="services-list" id="services-list"></div>
+          <div class="services-cta">
+            <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+          </div>
         </div>
       </section>
 
@@ -79,47 +121,38 @@
         <div class="container">
           <div class="section-heading section-heading-split gallery-heading">
             <div>
-              <h2 id="gallery-title">Encontre seu próximo estilo.</h2>
+              <h2 id="gallery-title">Veja nosso trabalho</h2>
             </div>
             <p class="section-intro">Referências para a sua próxima visita. O corte certo é aquele que combina com você.</p>
           </div>
-          <p class="demo-note">Imagens ilustrativas de referência.</p>
-          <div class="gallery-grid" id="gallery-grid"></div>
-        </div>
-      </section>
-
-      <section class="section about-section" id="barbearia" aria-labelledby="about-title">
-        <div class="container about-layout">
-          <div class="about-photo-wrap">
-            <picture>
-              <source type="image/webp" srcset="assets/images/interior-barbearia-600.webp 600w, assets/images/interior-barbearia-1000.webp 1000w" sizes="(max-width: 760px) calc(100vw - 40px), 48vw">
-              <img src="assets/images/interior-barbearia-1000.webp" width="1000" height="760" alt="Interior acolhedor de uma barbearia com cadeiras de barbeiro" loading="lazy" decoding="async">
-            </picture>
-            <span class="photo-caption">UM ESPAÇO PARA VOCÊ</span>
-          </div>
-          <div class="about-copy">
-            <h2 id="about-title">Seu momento.<br>Seu estilo.</h2>
-            <p class="about-lead">Mais do que um corte, um tempo reservado para você.</p>
-            <p class="body-copy">Acreditamos que um bom atendimento começa com uma conversa. Cada detalhe importa: entender seu estilo, cuidar do acabamento e fazer você se sentir à vontade do início ao fim.</p>
-            <ul class="feature-list" id="feature-list"></ul>
-            <p class="demo-note demo-note-dark">Informações demonstrativas — personalize para a barbearia.</p>
-            <a class="text-link" href="#profissional">Conheça quem vai lhe atender <span aria-hidden="true">↗</span></a>
+          <div class="gallery-marquees" id="gallery-grid" aria-label="Momentos de cortes e barbas em duas faixas automáticas">
+            <div class="gallery-marquee" tabindex="0" aria-label="Galeria de cortes e barbas, movimento da direita para a esquerda">
+              <div class="gallery-marquee-track gallery-marquee-left" data-work-track></div>
+            </div>
+            <div class="gallery-marquee" tabindex="0" aria-label="Galeria de cortes e barbas, movimento da esquerda para a direita">
+              <div class="gallery-marquee-track gallery-marquee-right" data-work-track></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section barber-section" id="profissional" aria-labelledby="barber-title">
+      <section class="section barber-section" id="barbearia" aria-labelledby="barber-title">
         <div class="container barber-layout">
           <div class="barber-image">
-            <img src="assets/images/natan.jpg" width="150" height="150" alt="Retrato do profissional da barbearia" loading="lazy" decoding="async">
-            <span class="image-number" aria-hidden="true">01</span>
+            <picture>
+              <img src="assets/images/Barbeiro-profissional.png" width="1024" height="1536" alt="Barbeiro em ambiente de barbearia, imagem ilustrativa" loading="lazy" decoding="async">
+            </picture>
           </div>
           <div class="barber-copy">
             <h2 id="barber-title">Quem vai<br>lhe atender</h2>
             <p class="barber-name" id="barber-name"></p>
             <p class="barber-role" id="barber-role"></p>
+            <p class="about-lead" id="barber-intro"></p>
             <p class="body-copy" id="barber-description"></p>
+            <p class="body-copy" id="barber-approach"></p>
+            <ul class="feature-list" id="feature-list"></ul>
             <p class="demo-note">Perfil demonstrativo — atualize com os dados reais.</p>
+            <p class="demo-note">Foto ilustrativa de banco de imagens.</p>
             <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
           </div>
         </div>
@@ -231,10 +264,5 @@
       <button class="button dialog-ok" type="button">Entendi</button>
     </dialog>
 
-    <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada da galeria">
-      <button class="lightbox-close" type="button" aria-label="Fechar imagem ampliada">×</button>
-      <img class="lightbox-image" id="lightbox-image" src="assets/images/degrade-detalhe-960.webp" width="960" height="680" alt="">
-      <p class="lightbox-caption" id="lightbox-caption"></p>
-    </dialog>
   </body>
 </html>

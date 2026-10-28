@@ -11,20 +11,78 @@ const CONFIG = {
     mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9464.375156572523!2d-40.74960073979789!3d-4.165347627999523!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x794e570b9470c27%3A0x19355a105870e59f!2sNk%20Barbearia!5e0!3m2!1spt-BR!2sbr!4v1793137153237!5m2!1spt-BR!2sbr",
   },
   services: [
-    { name: "Corte masculino", description: "Corte personalizado e acabamento cuidadoso.", price: "R$ 55", duration: "45 min" },
-    { name: "Barba completa", description: "Desenho, cuidado e finalização da barba.", price: "R$ 40", duration: "35 min" },
-    { name: "Corte + barba", description: "Um cuidado completo, da cabeça à barba.", price: "R$ 85", duration: "75 min", featured: true },
-    { name: "Corte infantil", description: "Um corte pensado para os pequenos.", price: "R$ 45", duration: "40 min" },
-    { name: "Acabamento", description: "Contorno e detalhes para renovar o visual.", price: "R$ 25", duration: "20 min" },
-    { name: "Sobrancelha", description: "Acabamento sutil para valorizar o olhar.", price: "R$ 20", duration: "15 min" },
+    {
+      name: "Corte navalhado",
+      description: "Acabamento com navalha para um visual limpo e bem definido.",
+      price: "R$ 38,50",
+      duration: "50 min",
+      image: "corte-tradicional",
+      imageAlt: "Corte com acabamento limpo e linhas bem definidas",
+    },
+    {
+      name: "Corte social",
+      description: "Modelo clássico para rotina e ocasiões formais.",
+      price: "R$ 38,50",
+      duration: "45 min",
+      image: "corte-moderno",
+      imageAlt: "Corte social com topo alinhado e laterais discretas",
+    },
+    {
+      name: "Corte degradê",
+      description: "Transição suave nas laterais com estilo atual.",
+      price: "R$ 38,50",
+      duration: "50 min",
+      image: "degrade-detalhe",
+      imageAlt: "Detalhe de corte degradê com acabamento preciso",
+    },
+    {
+      name: "Barba completa",
+      description: "Desenho, cuidado e finalização da barba.",
+      price: "R$ 28,00",
+      duration: "35 min",
+      image: "barba-detalhe",
+      imageAlt: "Acabamento de barba com precisão",
+    },
+    {
+      name: "Corte + barba",
+      description: "Um cuidado completo, da cabeça à barba.",
+      price: "R$ 59,50",
+      duration: "75 min",
+      image: "barbeiro-em-acao",
+      imageAlt: "Atendimento completo de corte e barba",
+    },
+    {
+      name: "Corte infantil",
+      description: "Um corte pensado para os pequenos.",
+      price: "R$ 31,50",
+      duration: "40 min",
+      image: "corte-em-execucao",
+      imageAlt: "Barbeiro finalizando corte infantil com cuidado",
+    },
+    {
+      name: "Acabamento",
+      description: "Contorno e detalhes para renovar o visual.",
+      price: "R$ 17,50",
+      duration: "20 min",
+      image: "corte-tradicional",
+      imageAlt: "Contorno de nuca com acabamento preciso",
+    },
+    {
+      name: "Sobrancelha",
+      description: "Acabamento sutil para valorizar o olhar.",
+      price: "R$ 14,00",
+      duration: "15 min",
+      image: "barbeiro-em-acao",
+      imageAlt: "Ajuste de sobrancelha durante atendimento",
+    },
   ],
   gallery: [
-    { image: "degrade-detalhe", alt: "Detalhe de um corte em degradê com acabamento preciso" },
-    { image: "corte-tradicional", alt: "Corte masculino com textura e laterais bem definidas" },
-    { image: "corte-em-execucao", alt: "Barbeiro finalizando o corte de um cliente" },
-    { image: "barba-detalhe", alt: "Barbeiro trabalhando no acabamento da barba" },
-    { image: "corte-moderno", alt: "Corte curto com degradê e topo texturizado" },
-    { image: "barbeiro-em-acao", alt: "Atendimento de barbearia durante um corte" },
+    { image: "degrade-detalhe", alt: "Detalhe de um corte em degradê com acabamento preciso", caption: "Degradê com precisão" },
+    { image: "corte-tradicional", alt: "Corte masculino com textura e laterais bem definidas", caption: "Corte clássico alinhado" },
+    { image: "corte-em-execucao", alt: "Barbeiro finalizando o corte de um cliente", caption: "Acabamento em foco" },
+    { image: "barba-detalhe", alt: "Barbeiro trabalhando no acabamento da barba", caption: "Barba com cuidado" },
+    { image: "corte-moderno", alt: "Corte curto com degradê e topo texturizado", caption: "Estilo contemporâneo" },
+    { image: "barbeiro-em-acao", alt: "Atendimento de barbearia durante um corte", caption: "Atendimento dedicado" },
   ],
   features: [
     "Atendimento com hora marcada",
@@ -35,7 +93,9 @@ const CONFIG = {
   professional: {
     name: "Nome do profissional",
     role: "Barbeiro · perfil demonstrativo",
-    description: "Cada atendimento começa com uma conversa para entender o que você procura. A proposta é respeitar seu estilo, cuidar de cada detalhe e deixar você à vontade durante toda a visita.",
+    intro: "Um atendimento acolhedor para você relaxar e sair com o visual certo.",
+    description: "Antes de começar, conversamos para entender o estilo que você procura e alinhar cada detalhe do corte.",
+    approach: "Do desenho inicial ao acabamento final, o cuidado é manter um resultado equilibrado e fiel ao seu perfil.",
   },
   reviews: [
     { placeholder: "Seu depoimento real pode aparecer aqui." },
@@ -43,13 +103,13 @@ const CONFIG = {
     { placeholder: "Este espaço está reservado para um cliente." },
   ],
   hours: [
-    ["Segunda-feira", "Exemplo: 09h–19h"],
-    ["Terça-feira", "Exemplo: 09h–19h"],
-    ["Quarta-feira", "Exemplo: 09h–19h"],
-    ["Quinta-feira", "Exemplo: 09h–19h"],
-    ["Sexta-feira", "Exemplo: 09h–19h"],
-    ["Sábado", "Exemplo: 09h–16h"],
-    ["Domingo", "Exemplo: fechado"],
+    ["Segunda-feira", "09h–19h"],
+    ["Terça-feira", "09h–19h"],
+    ["Quarta-feira", "09h–19h"],
+    ["Quinta-feira", "09h–19h"],
+    ["Sexta-feira", "09h–19h"],
+    ["Sábado", "09h–16h"],
+    ["Domingo", "fechado"],
   ],
   faqs: [
     {
@@ -80,39 +140,52 @@ const CONFIG = {
 };
 
 const bookingDialog = document.querySelector("#booking-dialog");
-const lightbox = document.querySelector("#lightbox");
-const lightboxImage = document.querySelector("#lightbox-image");
-const lightboxCaption = document.querySelector("#lightbox-caption");
-let lastGalleryTrigger = null;
-
 function renderServices() {
   const list = document.querySelector("#services-list");
   list.innerHTML = CONFIG.services.map((service) => `
-    <article class="service-card${service.featured ? " is-featured" : ""}">
-      <div>
+    <article class="service-card" tabindex="0">
+      <picture class="service-media" aria-hidden="true">
+        <source type="image/webp" srcset="assets/images/${service.image}-600.webp 600w, assets/images/${service.image}-960.webp 960w" sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 960px) calc((100vw - 56px) / 2), calc((min(1200px, 100vw - 64px) - 32px) / 3)">
+        <img src="assets/images/${service.image}-960.webp" width="960" height="680" alt="${service.imageAlt}" loading="lazy" decoding="async">
+      </picture>
+      <div class="service-overlay" aria-hidden="true"></div>
+      <div class="service-content">
         <h3 class="service-name">${service.name}</h3>
         <p class="service-description">${service.description}</p>
+        <p class="service-duration">${service.duration}</p>
       </div>
-      <p class="service-price">${service.price}<span class="service-duration">${service.duration}</span></p>
-      <button class="button" type="button" data-booking>Agendar meu horário <span aria-hidden="true">↗</span></button>
+      <p class="service-price">${service.price}</p>
     </article>
   `).join("");
 }
 
 function renderGallery() {
-  const grid = document.querySelector("#gallery-grid");
-  grid.innerHTML = CONFIG.gallery.map(({ image, alt }) => `
-    <button class="gallery-item" type="button" data-gallery="${image}" data-alt="${alt}" aria-label="Ampliar imagem: ${alt}">
+  const [firstTrack, secondTrack] = [
+    [CONFIG.gallery[0], CONFIG.gallery[2], CONFIG.gallery[4], CONFIG.gallery[1]],
+    [CONFIG.gallery[3], CONFIG.gallery[5], CONFIG.gallery[0], CONFIG.gallery[4]],
+  ];
+
+  const createGroup = (items, isClone = false) => `
+    <div class="gallery-marquee-group"${isClone ? ' aria-hidden="true"' : ""}>
+      ${items.map(({ image, alt, caption }) => `
+    <figure class="gallery-frame${isClone ? " is-clone" : ""}">
       <picture>
-        <source type="image/webp" srcset="assets/images/${image}-600.webp 600w, assets/images/${image}-960.webp 960w" sizes="(max-width: 760px) 50vw, 40vw">
-        <img src="assets/images/${image}-960.webp" width="960" height="680" alt="${alt}" loading="lazy" decoding="async">
+        <source type="image/webp" srcset="assets/images/${image}-600.webp 600w, assets/images/${image}-960.webp 960w" sizes="(max-width: 760px) 58vw, (max-width: 1120px) 30vw, 24vw">
+        <img src="assets/images/${image}-960.webp" width="960" height="680" alt="${isClone ? "" : alt}" loading="lazy" decoding="async">
       </picture>
-    </button>
-  `).join("");
+      <figcaption>${caption}</figcaption>
+    </figure>`).join("")}
+    </div>`;
+
+  const tracks = Array.from(document.querySelectorAll("[data-work-track]"));
+  if (tracks.length < 2) return;
+  tracks[0].innerHTML = `${createGroup(firstTrack)}${createGroup(firstTrack, true)}`;
+  tracks[1].innerHTML = `${createGroup(secondTrack)}${createGroup(secondTrack, true)}`;
 }
 
 function renderFeatures() {
   document.querySelector("#feature-list").innerHTML = CONFIG.features
+    .slice(0, 3)
     .map((feature) => `<li>${feature}</li>`)
     .join("");
 }
@@ -120,7 +193,9 @@ function renderFeatures() {
 function renderProfessional() {
   document.querySelector("#barber-name").textContent = CONFIG.professional.name;
   document.querySelector("#barber-role").textContent = CONFIG.professional.role;
+  document.querySelector("#barber-intro").textContent = CONFIG.professional.intro;
   document.querySelector("#barber-description").textContent = CONFIG.professional.description;
+  document.querySelector("#barber-approach").textContent = CONFIG.professional.approach;
 }
 
 function renderReviews() {
@@ -217,6 +292,89 @@ function configureBooking() {
   });
 }
 
+function configureHeroSlider() {
+  const hero = document.querySelector(".hero");
+  if (!hero) return;
+
+  const slides = Array.from(hero.querySelectorAll(".hero-slide"));
+  const slidesContainer = hero.querySelector(".hero-slides");
+  const dots = Array.from(hero.querySelectorAll(".hero-dot"));
+  const motionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let activeSlide = Math.max(0, slides.findIndex((slide) => slide.classList.contains("is-active")));
+  let slideTimer;
+
+  function showSlide(index) {
+    if (!slides.length) return;
+    activeSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const isActive = slideIndex === activeSlide;
+      slide.classList.toggle("is-active", isActive);
+      slide.setAttribute("aria-hidden", String(!isActive));
+      slide.inert = !isActive;
+    });
+    dots.forEach((dot, dotIndex) => {
+      const isActive = dotIndex === activeSlide;
+      dot.classList.toggle("is-active", isActive);
+      dot.setAttribute("aria-pressed", String(isActive));
+    });
+  }
+
+  function stopSlideTimer() {
+    window.clearInterval(slideTimer);
+  }
+
+  function startSlideTimer() {
+    stopSlideTimer();
+    if (slides.length > 1 && !motionPreference.matches && !document.hidden) {
+      slideTimer = window.setInterval(() => showSlide(activeSlide + 1), 6500);
+    }
+  }
+
+  showSlide(activeSlide);
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      startSlideTimer();
+    });
+  });
+  let pointerStartX = null;
+
+  function resetDrag() {
+    pointerStartX = null;
+    slidesContainer.classList.remove("is-dragging");
+  }
+
+  slidesContainer.addEventListener("pointerdown", (event) => {
+    if (pointerStartX !== null || (event.pointerType === "mouse" && event.button !== 0)) return;
+    if (event.target instanceof Element && event.target.closest("button, a, input, select, textarea")) return;
+    pointerStartX = event.clientX;
+    slidesContainer.setPointerCapture(event.pointerId);
+    slidesContainer.classList.add("is-dragging");
+    stopSlideTimer();
+  });
+  slidesContainer.addEventListener("pointerup", (event) => {
+    if (pointerStartX === null) return;
+    const distance = event.clientX - pointerStartX;
+    resetDrag();
+    if (Math.abs(distance) >= 50) showSlide(activeSlide + (distance < 0 ? 1 : -1));
+    startSlideTimer();
+  });
+  slidesContainer.addEventListener("pointercancel", () => {
+    if (pointerStartX === null) return;
+    resetDrag();
+    startSlideTimer();
+  });
+  hero.addEventListener("mouseenter", stopSlideTimer);
+  hero.addEventListener("mouseleave", startSlideTimer);
+  hero.addEventListener("focusin", stopSlideTimer);
+  hero.addEventListener("focusout", (event) => {
+    if (!hero.contains(event.relatedTarget)) startSlideTimer();
+  });
+  document.addEventListener("visibilitychange", startSlideTimer);
+  motionPreference.addEventListener?.("change", startSlideTimer);
+  startSlideTimer();
+}
+
 function configureNavigation() {
   const header = document.querySelector(".site-header");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -234,7 +392,9 @@ function configureNavigation() {
   nav.addEventListener("click", (event) => {
     if (event.target instanceof HTMLAnchorElement) {
       menuToggle.setAttribute("aria-expanded", "false");
-      nav.hidden = true;
+      if (window.matchMedia("(max-width: 760px)").matches) {
+        nav.hidden = true;
+      }
     }
   });
   nav.addEventListener("keydown", (event) => {
@@ -263,33 +423,6 @@ function configureNavigation() {
   window.addEventListener("resize", syncMobileNav);
 }
 
-function configureGallery() {
-  document.querySelector("#gallery-grid").addEventListener("click", (event) => {
-    const trigger = event.target.closest("[data-gallery]");
-    if (!trigger) return;
-
-    lastGalleryTrigger = trigger;
-    const imageName = trigger.dataset.gallery;
-    lightboxImage.src = `assets/images/${imageName}-960.webp`;
-    lightboxImage.srcset = `assets/images/${imageName}-600.webp 600w, assets/images/${imageName}-960.webp 960w`;
-    lightboxImage.alt = trigger.dataset.alt;
-    lightboxCaption.textContent = trigger.dataset.alt;
-    lightbox.showModal();
-  });
-
-  lightbox.querySelector(".lightbox-close").addEventListener("click", () => lightbox.close());
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) lightbox.close();
-  });
-  lightbox.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      event.preventDefault();
-      lightbox.close();
-    }
-  });
-  lightbox.addEventListener("close", () => lastGalleryTrigger?.focus());
-}
-
 function initializePage() {
   configureBrand();
   renderServices();
@@ -301,8 +434,8 @@ function initializePage() {
   renderFaqs();
   configureSocial();
   configureBooking();
+  configureHeroSlider();
   configureNavigation();
-  configureGallery();
   document.querySelector("#current-year").textContent = new Date().getFullYear();
 }
 
